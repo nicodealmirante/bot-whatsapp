@@ -1,10 +1,10 @@
-const {addKeyword} = require('@bot-whatsapp/bot')
+const {addKeyword,EVENTS,provider} = require('@bot-whatsapp/bot')
 let data1;
-
-const flowsAlquiler = addKeyword(['INFO. ALQUILER'], {sensitive: true})
+let mywhatsa = "+5491140054474@s.whatsapp.net"
+module.exports = addKeyword(['INFO. ALQUILER'], {sensitive: true})
           
                              //777777777777777777777777777777777777 ALQUILER
-let mywhatsa = "+5491140054474@s.whatsapp.net"
+
 
 
 .addAnswer('👌Te envio la info de alquiler.')
@@ -84,9 +84,8 @@ let mywhatsa = "+5491140054474@s.whatsapp.net"
 
          return gotoFlow(menuB)})
 
-const flujoFinal = addKeyword(EVENTS.ACTION).addAnswer('Sigue ahi? Quiere que me comunique  despues? Le dejo mi telefono *+5491140054474 - NICOLAS*"')
+const flujoFinal = addKeyword("VENTS.ACTION").addAnswer('Sigue ahi? Quiere que me comunique  despues? Le dejo mi telefono *+5491140054474 - NICOLAS*')
 
-   module.exports(flowsAlquiler)
 
    
 

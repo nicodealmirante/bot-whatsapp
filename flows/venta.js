@@ -1,10 +1,10 @@
-const { addKeyword } = require("@bot-whatsapp/bot")
+const { addKeyword,provider, EVENTS } = require("@bot-whatsapp/bot")
 
 let mywhatsa = "+5491140054474@s.whatsapp.net"
 
-const flowVenta = addKeyword(['INFO. VENTA'], { sensitive: true })
+module.exports = addKeyword(['INFO. VENTA'], { sensitive: true })
 .addAnswer('👌 Te envío la info de Venta.',{delay: 2000})
-
+ 
 .addAnswer(['*Espejo Mágico Selfie Mirror*',
           '\nEl Espejo Mágico de Selfie Mirror cuenta con una cámara web de alta calidad, vidrio templado resistente, una Mini PC y un',
           'televisor LED de 32 pulgadas. Estas características garantizan una experiencia de alta definición para capturar momentos',
@@ -97,6 +97,5 @@ await provider.sendtext(mywhatsa, `*VENTA* \nNumero: +${ctx.from}\n Nombre: *${c
 }
 )
 
-const flujoFinal = addKeyword(EVENTS.ACTION).addAnswer('Sigue ahi? Quiere que me comunique despues? Le dejo mi telefono *+5491140054474 - NICOLAS*"')
 
-module.exports(flowVenta)
+const flujoFinal = addKeyword('HH').addAnswer('Sigue ahi? Quiere que me comunique despues? Le dejo mi telefono *+5491140054474 - NICOLAS*')
