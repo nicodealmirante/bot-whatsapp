@@ -19,7 +19,6 @@ let data
 
 
 
-const flowContacto = require('./flows/contacto.js')
 const flowEmpresa = require('./flows/empresa.js')
 const flowAlquiler = require('./flows/alquiler.js')
 const flowVenta = require('./flows/venta.js')
@@ -44,7 +43,7 @@ const queue = new Queue({
 
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([evHola,flowAlquiler,flowContacto,flowEmpresa,flowVenta.evAudio,MenuB,Asesor])
+    const adapterFlow = createFlow([evHola,flowAlquiler,flowEmpresa,flowVenta.evAudio,MenuB,Asesor])
 
     const adapterProvider = createProvider(MetaProvider, {
         jwtToken: process.env.JWT_TOKEN,
