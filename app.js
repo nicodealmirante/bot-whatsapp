@@ -8,7 +8,7 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 const ServerHttp = require('./src/http')
 const ChatwootClass = require('./src/chatwoot/chatwoot.class')
 const { handlerMessage } = require('./src/chatwoot')
-
+const express = require('express')
 const PORT = process.env.PORT ?? 3001
 
 let data
@@ -19,11 +19,11 @@ let data
 
 
 
-const flowContacto = require('./base-meta-memory/flows/contacto.js')
-const flowEmpresa = require('./base-meta-memory/flows/empresa.js')
-const flowAlquiler = require('./base-meta-memory/flows/alquiler.js')
-const flowVenta = require('./base-meta-memory/flows/venta.js')
-const {evHola,MenuB, evAudio, Asesor  } = require('./base-meta-memory/flows/welcome.js')
+const flowContacto = require('./flows/contacto.js')
+const flowEmpresa = require('./flows/empresa.js')
+const flowAlquiler = require('./flows/alquiler.js')
+const flowVenta = require('./flows/venta.js')
+const {evHola,MenuB, evAudio, Asesor  } = require('./flows/welcome.js')
 const serverHttp = new ServerHttp(PORT)
 
 
